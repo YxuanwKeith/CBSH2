@@ -27,7 +27,7 @@ typedef vector< unordered_set<int64_t> > CAT; // conflict avoidance table
 struct PathEntry
 {
 	int location;
-	bool single;
+	bool single;	// [WYX] 是否在MDD中对应层为唯一节点
 	PathEntry(int loc = -1) { location = loc; single = false; }
 };
 

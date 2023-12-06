@@ -633,7 +633,7 @@ void ICBSSearch::classifyConflicts(ICBSNode &parent)
 		bool cardinal1 = false, cardinal2 = false;
 		if (get<4>(*con) >= (int)paths[get<0>(*con)]->size())
 			cardinal1 = true;
-		else if (!paths[get<0>(*con)]->at(0).single)
+		else if (!paths[get<0>(*con)]->at(0).single) // [WYX] 没更新MDD 
 		{
 			MDD* mdd = buildMDD(parent, get<0>(*con));
 			for (size_t i = 0; i < mdd->levels.size(); i++)

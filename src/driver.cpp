@@ -1,4 +1,4 @@
-﻿/* Copyright (C) Jiaoyang Li
+﻿ /* Copyright (C) Jiaoyang Li
 * Unauthorized copying of this file, via any medium is strictly prohibited
 * Confidential
 * Written by Jiaoyang Li <jiaoyanl@usc.edu>, May 2019
@@ -16,7 +16,7 @@
 
 
 #include <boost/program_options.hpp>
-#include<boost/tokenizer.hpp>
+#include <boost/tokenizer.hpp>
 
 int main(int argc, char** argv) 
 {
