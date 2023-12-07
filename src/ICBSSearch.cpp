@@ -31,7 +31,7 @@ int ICBSSearch::collectConstraints(ICBSNode* curr, int agent_id, std::vector <st
 {
 	std::clock_t t1 = std::clock();
 	// extract all constraints on agent_id
-	int minLength = 0;
+	int minLength = 0; // [WYX] 路径长度下界
 	list < tuple<int, int, int> > constraints;
 	int max_timestep = -1;
 	while (curr != dummy_start) 
@@ -867,7 +867,7 @@ bool ICBSSearch::generateChild(ICBSNode*  node, ICBSNode* parent)
 
 	int lowerbound;
 	if (get<2>(*parent->conflict) < 0) // both constraints are at goal locations
-		lowerbound = 0; // lowver bound here is meaningless
+		lowerbound = 0; // lower bound here is meaningless
 	else if (get<4>(*parent->conflict) >= (int)paths[node->agent_id]->size()) //conflict happens after agent reaches its goal
 		lowerbound = get<4>(*parent->conflict) + 1;
 	//else if (parent->h_val > 0) // the chosen conflict is cardinal

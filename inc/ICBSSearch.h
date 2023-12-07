@@ -128,6 +128,7 @@ private:
 
 	// build MDD
 	MDD * buildMDD(ICBSNode& curr, int id);
+	// [WYX] 删除MDD中agent对应的路径最短的MDD图
 	void releaseMDDMemory(int id);
 
 	//update information

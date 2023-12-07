@@ -59,7 +59,7 @@ public:
 struct ConstraintsHasher // Hash a CT node by constraints on one agent
 {
 	int a;
-	const ICBSNode* n;
+	const ICBSNode* n; // [WYX] release node时需要处理
 
 	ConstraintsHasher() {};
 	ConstraintsHasher(int a, const ICBSNode* n) : a(a), n(n) {};
